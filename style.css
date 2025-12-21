@@ -52,14 +52,13 @@ body {
 
 /* NAV CONTAINER OUTSIDE HEADER */
 #nav-container {
-  position: absolute;
-  top: 70px;
+  position: fixed;
+  top: 70px; /* height of header */
   left: 0;
   width: 100%;
   background: var(--accent-color);
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.4s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
   z-index: 999;
 }
 
