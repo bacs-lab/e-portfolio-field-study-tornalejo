@@ -400,3 +400,69 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
+
+
+
+
+.document-block {
+  margin-bottom: 2rem;
+}
+
+.doc-thumbnail {
+  width: 140px;
+  margin-right: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.doc-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.certificate-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.teaching-philosophy {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--highlight);
+  border-radius: 6px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+
+
+.reflection-quote {
+  font-style: italic;
+  color: var(--highlight);
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--highlight);
+}
+
+.reflection-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.reflection-card {
+  flex: 1;
+  min-width: 250px;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.reflection-card h3 {
+  color: var(--highlight);
+  margin-bottom: 0.75rem;
+}
