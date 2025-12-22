@@ -33,15 +33,18 @@ function openModal(elem, pdfPath = null) {
   modal.style.display = "flex";
 
   if (pdfPath) {
-    pdfViewer.style.display = "block";
+    // PDF Mode
     modalImg.style.display = "none";
+    pdfViewer.style.display = "block";
     pdfViewer.src = pdfPath;
   } else {
+    // Image Mode
     pdfViewer.style.display = "none";
     modalImg.style.display = "block";
-    modalImg.src = elem.src;
+    modalImg.src = elem.src || elem.getAttribute("src");
   }
 }
+
 
 function closeModal() {
   const modal = document.getElementById("imageModal");
