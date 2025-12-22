@@ -1,62 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Field Study 1</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">Teacher Kaye</div>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="logo-expand" onclick="toggleMenu()">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+      <span class="dropdown-arrow">&#9660;</span>
     </div>
-    <nav>
-      <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="fs2.html">Field Study 2</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Field Study 1</h1>
-      <h2>Observation of the Teaching–Learning Environment</h2>
-      <p>This section includes reports, artifacts, and reflections on real classroom experiences.</p>
+  <nav id="nav-container">
+    <ul id="nav-links">
+      <li><a href="index.html">Back to Home</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <h1>Field Study 1: Observation of Teaching–Learning Environment</h1>
+  </section>
+
+  <section class="section">
+  <h2>Observation Reports</h2>
+  <div class="pdf-gallery">
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/Classroom Management.pdf')">
+      <img src="pdfp/1.png" alt="Classroom Management">
+      <p>Classroom Management Techniques</p>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Observation Reports</h2>
-    <div class="scroll-box">
-      <ul>
-        <li>Classroom Management Techniques</li>
-        <li>Learning Environment</li>
-        <li>Student Diversity and Behavior</li>
-        <li>Instructional Planning and Cycle</li>
-        <li>Teaching–Learning Resources and ICT</li>
-        <li>Assessment Practices</li>
-      </ul>
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/The School Environment and the Learner.pdf')">
+      <img src="pdfp/2.png" alt="Learning Environment">
+      <p>Learning Environment</p>
     </div>
-  </section>
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/The Teacher of the 21st Century.pdf')">
+      <img src="pdfp/2.1.png" alt="Student Diversity">
+      <p>Student Diversity and Behavior</p>
+    </div>
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/Instructional Planning and Cycle.pdf')">
+      <img src="pdfp/3.png" alt="Instructional Planning">
+      <p>Instructional Planning and Cycle</p>
+    </div>
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/The Teaching–Learning Resources and ICT.pdf')">
+      <img src="pdfp/4.png" alt="Resources and ICT">
+      <p>Teaching–Learning Resources and ICT</p>
+    </div>
+    <div class="pdf-thumb" onclick="openModal(this, 'pdf/Assessment Practices.pdf')">
+      <img src="pdfp/5.png" alt="Assessment Practices">
+      <p>Assessment Practices</p>
+    </div>
+  </div>
+</section>
+
 
   <section class="section">
-    <h2>Artifacts</h2>
-    <p>Photos of classroom setup, sample lesson plans, and learning materials used in real classes.</p>
-  </section>
+  <h2>Artifacts</h2>
+  <div class="carousel-wrapper">
 
-  <section class="section">
-    <h2>Reflections</h2>
-    <p>[Placeholder for personal reflections about the learning experience, growth, and future applications.]</p>
-  </section>
+    <div class="carousel-container">
+      <div class="carousel-track" id="carouselTrack">
+        <img src="art/1.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/2.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/3.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/4.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/5.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/6.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/7.jpg" class="carousel-item" onclick="openModal(this)">
+        <img src="art/8.jpg" class="carousel-item" onclick="openModal(this)">
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; Jhanna Kaye Tornalejo – Teaching Portfolio</p>
-  </footer>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <iframe id="pdfViewer" class="modal-content" style="display: none;" frameborder="0"></iframe>
+    <img class="modal-content" id="modalImg" alt="Expanded View">
+  </div>
 
   <script src="script.js"></script>
 </body>
